@@ -1,0 +1,16 @@
+PODS:
+  - ICPageManager (1.0.0)
+
+DEPENDENCIES:
+  - ICPageManager (from `../`)
+
+EXTERNAL SOURCES:
+  ICPageManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ICPageManager: 6c60ffcac39bfd6c2576ce66531331e655b42bba
+
+PODFILE CHECKSUM: 895dc12d229927e96ceca4eaa4fbddfe3ad36205
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,6 @@
+framework module ICPageManager {
+  umbrella header "ICPageManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ICPageManager_Example' do
+  pod 'ICPageManager', :path => '../'
+
+  target 'ICPageManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
