@@ -41,7 +41,7 @@
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {
-    return [transitionContext isInteractive] ? 0.3f : 0.5f;
+    return 0.3f;//[transitionContext isInteractive] ? 0.3f : 0.5f;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
