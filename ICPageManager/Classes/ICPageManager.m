@@ -192,8 +192,15 @@
 
 - (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)animated completion:(void (^)(void))completion
 {
+    UIViewController *appRootViewController = UIApplication.sharedApplication.delegate.window.rootViewController;
+    if (appRootViewController.presentedViewController) {
+        // Presenting view controllers on detached view controllers is discouraged
+        assert(0);
+        return;
+    }
+    
     [self.presentAnimationController setupWithTargetViewController:viewControllerToPresent];
-    [UIApplication.sharedApplication.delegate.window.rootViewController presentViewController:viewControllerToPresent animated:animated completion:completion];
+    [appRootViewController presentViewController:viewControllerToPresent animated:animated completion:completion];
 }
 
 #pragma mark - UINavigationControllerDelegate

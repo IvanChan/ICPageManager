@@ -57,7 +57,7 @@ static int count = 1;
 
 - (IBAction)presentClicked:(id)sender
 {
-    [self presentViewController:[ICBViewController new] animated:YES completion:^{
+    [[ICPageManager sharedManager] presentPageViewController:[ICBViewController new] animated:YES completion:^{
         
         NSLog(@"presentViewController finished");
     }];

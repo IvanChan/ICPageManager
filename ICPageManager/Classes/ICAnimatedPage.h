@@ -20,7 +20,6 @@ typedef NS_ENUM(NSUInteger, PageGestureDirection) {
 
 @optional
 
-
 // Navigation stuff
 - (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                           interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController;

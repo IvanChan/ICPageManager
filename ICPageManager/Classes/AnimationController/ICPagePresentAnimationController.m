@@ -10,6 +10,7 @@
 
 @implementation ICPagePresentAnimationController
 
+#pragma mark - Lifecycle
 - (void)setupWithTargetViewController:(UIViewController *)targetViewController
 {
     [super setupWithTargetViewController:targetViewController];
@@ -25,7 +26,6 @@
         self.borderTriggerWidthHorizontal = [responsablePageAnimationController borderTriggerWidthHorizontal];
     }
 
-    
     if ([responsablePageAnimationController respondsToSelector:@selector(borderTriggerWidthVertical)])
     {
         self.borderTriggerWidthVertical = [responsablePageAnimationController borderTriggerWidthVertical];
@@ -41,6 +41,33 @@
     }
 
     targetViewController.transitioningDelegate = self;
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+- (nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                           presentingController:(UIViewController *)presenting
+                                                                               sourceController:(UIViewController *)source
+{
+    UIViewController<UIViewControllerTransitioningDelegate> *animatedViewController = (UIViewController<UIViewControllerTransitioningDelegate> *)presented;
+    if ([animatedViewController respondsToSelector:@selector(animationControllerForPresentedController:presentingController:sourceController:)]) {
+        return [animatedViewController animationControllerForPresentedController:presented presentingController:presenting sourceController:source];
+    }
+    else
+    {
+        return [super animationControllerForPresentedController:presented presentingController:presenting sourceController:source];
+    }
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    UIViewController<UIViewControllerTransitioningDelegate> *animatedViewController = (UIViewController<UIViewControllerTransitioningDelegate> *)dismissed;
+    if ([animatedViewController respondsToSelector:@selector(animationControllerForDismissedController:)]) {
+        return [animatedViewController animationControllerForDismissedController:dismissed];
+    }
+    else
+    {
+        return [super animationControllerForDismissedController:dismissed];
+    }
 }
 
 @end
