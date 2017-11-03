@@ -40,6 +40,7 @@
         self.enabledVerticalMove = (supportedPageGestureDirection & PageGestureDirectionVertical);
     }
 
+    targetViewController.transitioningDelegate = self;
 }
 
 @end

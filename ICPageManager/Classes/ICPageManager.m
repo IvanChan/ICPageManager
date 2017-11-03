@@ -25,12 +25,9 @@
 
 @property (nonatomic, strong) UINavigationController *mainNavigationController;
 @property (nonatomic, strong) ICPageNaviAnimationController *naviAnimationController;
+@property (nonatomic, strong) ICPagePresentAnimationController *presentAnimationController;
 
 @property (nonatomic, strong) NSMutableDictionary *completionBlockHash;
-
-
-@property (nonatomic, strong) ICPagePresentAnimationController *animationController;
-
 
 @end
 
@@ -61,12 +58,30 @@
     self.mainNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController] ;
     self.mainNavigationController.navigationBarHidden = YES;
     
-    self.naviAnimationController = [ICPageNaviAnimationController new];
     [self.naviAnimationController setupWithTargetViewController:self.mainNavigationController];
-    self.naviAnimationController.delegate = self;
 }
 
 #pragma mark - Getters
+- (ICPageNaviAnimationController *)naviAnimationController
+{
+    if (_naviAnimationController == nil)
+    {
+        _naviAnimationController = [ICPageNaviAnimationController new];
+        _naviAnimationController.delegate = self;
+    }
+    return _naviAnimationController;
+}
+
+- (ICPagePresentAnimationController *)presentAnimationController
+{
+    if (_presentAnimationController == nil)
+    {
+        _presentAnimationController = [ICPagePresentAnimationController new];
+        _presentAnimationController.delegate = self;
+    }
+    return _presentAnimationController;
+}
+
 - (NSMutableDictionary *)completionBlockHash
 {
     if (_completionBlockHash == nil)
@@ -175,10 +190,10 @@
     [self.mainNavigationController popToRootViewControllerAnimated:animated];
 }
 
-- (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion
+- (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)animated completion:(void (^)(void))completion
 {
-    
-    
+    [self.presentAnimationController setupWithTargetViewController:viewControllerToPresent];
+    [UIApplication.sharedApplication.delegate.window.rootViewController presentViewController:viewControllerToPresent animated:animated completion:completion];
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -211,11 +226,18 @@
                                          toViewController:toVC];
 }
 
-#pragma mark - CommonNavigationAnimationControllerDelegate
-- (void)commonNavigationAnimationControllerDidFinishInteractiveTransition:(ICCommonNavigationAnimationController *)animationController
+#pragma mark - CommonAnimationControllerDelegate
+- (void)commonAnimationControllerDidFinishInteractiveTransition:(ICCommonAnimationController *)animationController
                                                                isCanceled:(BOOL)isCanceled
 {
-
+    if (animationController == self.naviAnimationController)
+    {
+        
+    }
+    else if (animationController == self.presentAnimationController)
+    {
+        
+    }
 }
 
 @end

@@ -26,6 +26,6 @@ typedef void(^ICPageManagerCompletionBlock)(UINavigationController *navigationCo
 - (void)popToViewController:(UIViewController *)pageViewController animated:(BOOL)animated completion:(ICPageManagerCompletionBlock)completion;
 
 
-- (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
+- (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)animated completion:(void (^)(void))completion;
 
 @end
