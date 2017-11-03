@@ -1,85 +1,75 @@
 //
-//  ICCommonPresentAnimationControllerDelegate.m
+//  ICCommonAnimationController.m
 //  ICPageManager
 //
-//  Created by _ivanC on 3/11/16.
-//  Copyright © 2016 _ivanC. All rights reserved.
+//  Created by _ivanC on 03/11/2017.
 //
 
-#import "ICCommonPresentAnimationController.h"
-#import "ICCommonNavigationAnimatedTransitioning.h"
+#import "ICCommonAnimationController.h"
 
 #define VELOCITY_TRIGGER_VALUE  600
 
-@interface ICCommonPresentAnimationController ()
+@interface ICCommonAnimationController ()
 
-@property (nonatomic, strong) UIViewController *presentedViewController;
+@property (nonatomic, strong) UIViewController *targetViewController;
 @property (nonatomic, strong) UIPanGestureRecognizer *interactiveGestureRecognizer;
 
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactiveTransition;
 @property (nonatomic, assign) CGFloat progressX;
 @property (nonatomic, assign) CGFloat progressY;
-//@property (nonatomic, assign) BOOL isMovingHorizontal;
+
+@property (nonatomic, assign) BOOL isMovingHorizontal;
 
 @end
 
-@implementation ICCommonPresentAnimationController
+@implementation ICCommonAnimationController
+@synthesize progressX = _progressX;
+@synthesize progressY = _progressY;
 
 #pragma mark - Lifecycle
-- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
+- (instancetype)init
 {
     if (self = [super init])
     {
-        self.presentedViewController = presentedViewController;
-        self.interactiveGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleTransitionGesture:)];
-        self.interactiveGestureRecognizer.delegate = self;
-        [self.presentedViewController.view addGestureRecognizer:self.interactiveGestureRecognizer];
-        
-        self.enabledHorizontalMove = YES;
-        
         self.finishThreshold = 0.3;
-        self.borderTriggerWidthHorizontal = ICPAGEMANAGER_PRESENT_DEFAULT_BORDER_TRIGGER_WIDTH;
-        self.borderTriggerWidthVertical = ICPAGEMANAGER_PRESENT_DEFAULT_BORDER_TRIGGER_WIDTH;
     }
     return self;
 }
 
-#pragma mark - UIViewControllerTransitioningDelegate
-- (nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
-                                                                  presentingController:(UIViewController *)presenting
-                                                                      sourceController:(UIViewController *)source
+- (void)reset
 {
-    return [[ICCommonNavigationAnimatedTransitioning alloc] initWithOperation:UINavigationControllerOperationPush];
+    self.targetViewController = nil;
+    [self.targetViewController.view removeGestureRecognizer:self.interactiveGestureRecognizer];
+    
+    self.interactiveGestureRecognizer.delegate = nil;
+    self.interactiveGestureRecognizer = nil;
 }
 
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+- (void)setupWithTargetViewController:(UIViewController *)targetViewController;
 {
-    return [[ICCommonNavigationAnimatedTransitioning alloc] initWithOperation:UINavigationControllerOperationPop];
+    [self reset];
+    
+    self.targetViewController = targetViewController;
+    self.interactiveGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleTransitionGesture:)];
+    self.interactiveGestureRecognizer.delegate = self;
+    [self.targetViewController.view addGestureRecognizer:self.interactiveGestureRecognizer];
+    
+    self.borderTriggerWidthHorizontal = IC_PAGEMANAGER_DEFAULT_BORDER_TRIGGER_WIDTH;
+    self.borderTriggerWidthVertical = IC_PAGEMANAGER_DEFAULT_BORDER_TRIGGER_WIDTH;
 }
 
-- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator
+#pragma mark - Gesture Action
+- (void)existCurrentViewController
 {
-    // Not Support yet
-    return nil;
+    // for sub-class implement
 }
-
-- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator
-{
-    return self.interactiveTransition;
-}
-
-//- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
-//{
-//    // Not Support yet
-//    return nil;
-//}
 
 #pragma mark - Gesture Stuff
 - (void)handleTransitionGesture:(UIPanGestureRecognizer *)recognizer
 {
     _progressX = [recognizer translationInView:recognizer.view].x / recognizer.view.frame.size.width;
     _progressY = [recognizer translationInView:recognizer.view].y / recognizer.view.frame.size.height;
-        
+    
     switch (recognizer.state)
     {
         case UIGestureRecognizerStateBegan:
@@ -87,9 +77,10 @@
             assert(self.enabledVerticalMove || self.enabledHorizontalMove);
             
             _isMovingHorizontal = (!self.enabledVerticalMove ||  fabs(_progressY) < fabs(_progressX) );
-
+            
             self.interactiveTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
-            [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+            
+            [self existCurrentViewController];
         }
             break;
             
@@ -127,10 +118,10 @@
                 [self.interactiveTransition cancelInteractiveTransition];
             }
             
-            __strong ICCommonPresentAnimationController *strongSelf = self;
-            if ([strongSelf.delegate respondsToSelector:@selector(commonPresentAnimationControllerDidFinishInteractiveTransition:isCanceled:)])
+            __strong ICCommonAnimationController *strongSelf = self; // in case released during the delegate callback
+            if ([strongSelf.delegate respondsToSelector:@selector(commonAnimationControllerDidFinishInteractiveTransition:isCanceled:)])
             {
-                [strongSelf.delegate commonPresentAnimationControllerDidFinishInteractiveTransition:self isCanceled:!finished];
+                [strongSelf.delegate commonAnimationControllerDidFinishInteractiveTransition:self isCanceled:!finished];
             }
             
             self.interactiveTransition = nil;
@@ -152,8 +143,17 @@
         
         BOOL xMoved = fabs(translate.x) > 0.01;
         BOOL yMoved = fabs(translate.y) > 0.01;
-
+        
         directionEnabled = ((self.enabledHorizontalMove && xMoved) || (self.enabledVerticalMove && yMoved));
+        
+        if (!directionEnabled
+            || [self.targetViewController.transitionCoordinator isAnimated]
+            || (!self.enabledVerticalMove && !self.enabledHorizontalMove)
+            || (self.enabledHorizontalMove && !self.enabledVerticalMove && [gestureRecognizer locationInView:gestureRecognizer.view].x >= self.borderTriggerWidthHorizontal)
+            || (!self.enabledHorizontalMove && self.enabledVerticalMove && [gestureRecognizer locationInView:gestureRecognizer.view].y > self.borderTriggerWidthVertical))
+        {
+            return NO;
+        }
     }
     
     return YES;
@@ -166,11 +166,11 @@
         return NO;
     }
     
-    CGPoint touchPoint = [self.interactiveGestureRecognizer locationInView:self.presentedViewController.view];
-
+    CGPoint touchPoint = [self.interactiveGestureRecognizer locationInView:self.targetViewController.view];
+    
     CGFloat transX = [gestureRecognizer translationInView:gestureRecognizer.view].x;
     CGFloat transY = [gestureRecognizer translationInView:gestureRecognizer.view].y;
-
+    
     // We dealing with our gesture in high priority when touch in border-trigger-zone & fail other gesture
     if ( (self.enabledHorizontalMove && fabs(transX) > fabs(transY) && touchPoint.x < self.borderTriggerWidthHorizontal )
         ||  (self.enabledVerticalMove && fabs(transX) < fabs(transY) && touchPoint.y < self.borderTriggerWidthVertical) )

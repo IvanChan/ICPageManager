@@ -10,12 +10,14 @@
 #endif
 #endif
 
+#import "ICCommonAnimationController.h"
 #import "ICCommonNavigationAnimationController.h"
 #import "ICCommonPresentAnimationController.h"
+#import "ICPageNaviAnimationController.h"
+#import "ICPagePresentAnimationController.h"
 #import "ICCommonNavigationAnimatedTransitioning.h"
 #import "ICCommonPresentAnimatedTransitioning.h"
 #import "ICAnimatedPage.h"
-#import "ICPageAnimationController.h"
 #import "ICPageManager.h"
 
 FOUNDATION_EXPORT double ICPageManagerVersionNumber;

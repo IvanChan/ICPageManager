@@ -1,5 +1,5 @@
 PODS:
-  - ICPageManager (1.0.0)
+  - ICPageManager (1.0.3)
 
 DEPENDENCIES:
   - ICPageManager (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ICPageManager: 6c60ffcac39bfd6c2576ce66531331e655b42bba
+  ICPageManager: 1fe2cbe94e7ddfcfefe8ba955a2a41eb0d70057b
 
 PODFILE CHECKSUM: 895dc12d229927e96ceca4eaa4fbddfe3ad36205
 

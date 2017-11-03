@@ -1,5 +1,5 @@
 //
-//  ICPageAnimationController.h
+//  ICPageNaviAnimationController.h
 //  ICPageManager
 //
 //  Created by _ivanC on 1/20/16.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ICCommonNavigationAnimationController.h"
 
-@interface ICPageAnimationController : ICCommonNavigationAnimationController
+@interface ICPageNaviAnimationController : ICCommonNavigationAnimationController
 
 @property (nonatomic, strong, readonly) UIViewController *currentActiveViewController;
 

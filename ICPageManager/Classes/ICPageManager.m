@@ -7,7 +7,8 @@
 //
 
 #import "ICPageManager.h"
-#import "ICPageAnimationController.h"
+#import "ICPageNaviAnimationController.h"
+#import "ICPagePresentAnimationController.h"
 
 @interface ICPageManagerCompletionInfo : NSObject
 
@@ -20,12 +21,16 @@
 
 @end
 
-@interface ICPageManager () <UINavigationControllerDelegate, ICCommonNavigationAnimationControllerDelegate>
+@interface ICPageManager () <UINavigationControllerDelegate, ICCommonAnimationControllerDelegate>
 
 @property (nonatomic, strong) UINavigationController *mainNavigationController;
-@property (nonatomic, strong) ICPageAnimationController *animationController;
+@property (nonatomic, strong) ICPageNaviAnimationController *naviAnimationController;
 
 @property (nonatomic, strong) NSMutableDictionary *completionBlockHash;
+
+
+@property (nonatomic, strong) ICPagePresentAnimationController *animationController;
+
 
 @end
 
@@ -56,8 +61,9 @@
     self.mainNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController] ;
     self.mainNavigationController.navigationBarHidden = YES;
     
-    self.animationController = [[ICPageAnimationController alloc] initWithNavigationController:self.mainNavigationController];
-    self.animationController.delegate = self;
+    self.naviAnimationController = [ICPageNaviAnimationController new];
+    [self.naviAnimationController setupWithTargetViewController:self.mainNavigationController];
+    self.naviAnimationController.delegate = self;
 }
 
 #pragma mark - Getters
@@ -158,6 +164,7 @@
 
     [self.mainNavigationController popToViewController:pageViewController animated:animated];
 }
+
 - (void)popToRootPageViewController:(BOOL)animated completion:(void (^ __nullable)(UINavigationController * __nullable navigationController))completion
 {
     UIViewController *rootViewController = [[self.mainNavigationController viewControllers] firstObject];
@@ -166,6 +173,12 @@
               forViewController:rootViewController];
     
     [self.mainNavigationController popToRootViewControllerAnimated:animated];
+}
+
+- (void)presentPageViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion
+{
+    
+    
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -177,13 +190,13 @@
 {
     [self flushCompletionCallbackForViewController:viewController];
  
-    [self.animationController updateStateWithViewController:viewController];
+    [self.naviAnimationController updateStateWithViewController:viewController];
 }
 
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                                    interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController
 {
-    return [self.animationController navigationController:navigationController interactionControllerForAnimationController:animationController];
+    return [self.naviAnimationController navigationController:navigationController interactionControllerForAnimationController:animationController];
 }
 
 
@@ -192,7 +205,7 @@
                                                          fromViewController:(nonnull UIViewController *)fromVC
                                                            toViewController:(nonnull UIViewController *)toVC
 {
-    return [self.animationController navigationController:navigationController
+    return [self.naviAnimationController navigationController:navigationController
                           animationControllerForOperation:operation
                                        fromViewController:fromVC
                                          toViewController:toVC];

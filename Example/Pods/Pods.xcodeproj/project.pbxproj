@@ -7,28 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01153D8BD7D12420B7B89002216387A8 /* ICPageNaviAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 545E1F916B4405449291183105324B85 /* ICPageNaviAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06D0E4BE5BB8A515F4D102445F5CE91C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		086577B324F3C1F149CAD70AFEF0C881 /* Pods-ICPageManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D10AC3FAFC706EDA501C87090F5F6C6 /* Pods-ICPageManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B38CFE2A67E5527D21CC4E3EC78812E /* ICPageManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F45B4CA6A324D036030C4610EDAF4E97 /* ICPageManager-dummy.m */; };
+		0FB1C845397EE338B94280E98EE43365 /* ICPageManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03A229E8AA98C73CD89917266C905E48 /* ICPageManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		216FF040ECB6A1B7F8ADCBE45FE8D26D /* ICPageManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F45B4CA6A324D036030C4610EDAF4E97 /* ICPageManager-dummy.m */; };
+		2A9A4558F2A17FFA1E04B7F64D9986F7 /* ICCommonNavigationAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A9D03368EA2BBEA736CF76724B9AD6 /* ICCommonNavigationAnimatedTransitioning.m */; };
+		3106925358B18B9425291F0EE5B9694C /* ICPagePresentAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8698A57F0A70873C83520F4239F8B7F /* ICPagePresentAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35BBCA2A328D0319A4F552CC34CE1A28 /* Pods-ICPageManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DC6247CCB86B1570FD954F0DED4332 /* Pods-ICPageManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		393DA727D02D0E58D2F70B917ACA5797 /* ICCommonNavigationAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1C33477D27F28407D875D8F84F730B /* ICCommonNavigationAnimatedTransitioning.m */; };
-		405DEA8D995923875A24B33C1076A78A /* ICCommonNavigationAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 787C073A784018AA09DA3B451735EC6E /* ICCommonNavigationAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45BC3E6A901B14D6F73AE5CDC7048005 /* ICPageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B90D89BAD2877D123BF1AE5D8485C72C /* ICPageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48C62137FA13CE7586BF69170D401F55 /* ICCommonNavigationAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C4372F7F615A8A259CDF18C809F58F /* ICCommonNavigationAnimationController.m */; };
+		480AD518C5066B8E02B89C980EB5F8A2 /* ICPageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E157E8C5C017082ACD874304E3C295C /* ICPageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5038DDDBD2C933A83049A989F22972C3 /* Pods-ICPageManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF7E779E5D4DC9DB98C08627C064A9 /* Pods-ICPageManager_Tests-dummy.m */; };
 		53637AE46C1623BAA6E410A6A0DCFC7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		53A494CA02B0CBC9639CD79BF5B033EC /* ICCommonPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2D4DA3B1A930862B893390B6A677A /* ICCommonPresentAnimationController.m */; };
 		53AC8569797370EE897E27374ED03BDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5554B242C7C8CF62959C01183EF07069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5EBF2799AC2DD3ABAC0EEB8A9DF8A5AB /* ICAnimatedPage.h in Headers */ = {isa = PBXBuildFile; fileRef = ABFC1D8915263EFCBF655E0596B8F7D7 /* ICAnimatedPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D26FFCACE673587A64F7AAA70A74ADF /* ICCommonPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7146F05D28B87AC90B82732BA5BFAC7 /* ICCommonPresentAnimationController.m */; };
-		73D312ABAFA3988BC6BB48092517080E /* ICCommonNavigationAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 368D39C2B7894C3CA53AF2B8007C24DB /* ICCommonNavigationAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60478DCC03EA9931E6FB8F7E65B99146 /* ICPageNaviAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE238AC6411DDE792C12F3A4403F1D1 /* ICPageNaviAnimationController.m */; };
+		717E9CF62A9C73CF5D6164C1D9A7B187 /* ICCommonPresentAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F6742FE92B3C5274CE9514F94A3B57 /* ICCommonPresentAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		783F61D6AA91C978616403FA31603758 /* ICAnimatedPage.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AC1339E717E4A2202A8531F3AC810F /* ICAnimatedPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AF0F1814DD432F7FEABC2CEBF7BD21F /* Pods-ICPageManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 046893C4DF90526C5BD6A90C8021A76E /* Pods-ICPageManager_Example-dummy.m */; };
-		89B51AF7853CD4A7030CE8B641F40A87 /* ICCommonPresentAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 2450C1A755D6F10DB6B55E0B8A6E987B /* ICCommonPresentAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99A5D0BF550F1B8FBE8BBC23D66552EE /* ICCommonPresentAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 36623B051F1CE3547D63F2C97E4F05E6 /* ICCommonPresentAnimatedTransitioning.m */; };
-		AD62E15721CF834BE5A003930352EED5 /* ICPageManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03A229E8AA98C73CD89917266C905E48 /* ICPageManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF3C7F61493DB15FF3675265EC47512A /* ICCommonPresentAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9C58AF78BA2091E601DC721405609 /* ICCommonPresentAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C50A147FAC8045531CAF3C0701EF5F5D /* ICPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C44FAB0BCB1F636CFDB92E5A5991C95D /* ICPageManager.m */; };
-		C780194354A6C14619669E9751BDBC71 /* ICPageAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = DF30E0F8B3C7D9CE375CF6267D9227E9 /* ICPageAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA61E4857CD358D75B81F581129C0BF4 /* ICPageAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84755D8E1D365A37793D7DFE11ACBDDF /* ICPageAnimationController.m */; };
+		85D8D069B5F3A5B03C8A27EFF2C1CF99 /* ICCommonPresentAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 2585CFAA1F81E87AE9B786982CF3837D /* ICCommonPresentAnimatedTransitioning.m */; };
+		87C6FBD3915E727414EDC179592139BE /* ICCommonAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3883B0DBC2ECDF0CDA6A6C8DBDCA5A78 /* ICCommonAnimationController.m */; };
+		AAD39E93CAB18E3708497DB28017D2F3 /* ICCommonNavigationAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 42C15BD482376688CA47D57E4C8CBE37 /* ICCommonNavigationAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9851C8A0F3B846D097F82376E5B8488 /* ICCommonAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7B046D49BE8C02E8BEA55975C457EE /* ICCommonAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE53AF7D337885590B452E06A3229D9 /* ICCommonNavigationAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F59389CA17A6D6410F65B58A1D8E7026 /* ICCommonNavigationAnimationController.m */; };
+		D9F2C5AAA753CE4144481111CCE7C30F /* ICCommonPresentAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5BBE3D3DBF3604045BD9CC4AAA96583 /* ICCommonPresentAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C0E06DF1DCD158BB4BC6B9E0E7EB67 /* ICPagePresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E301E14B904AD5903D3E1BB3FE9FEDE /* ICPagePresentAnimationController.m */; };
+		ED08D8CBEADAEC92F93BD2A0E6CF252B /* ICCommonNavigationAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9820EB104D7970B6000DECEB0D5951 /* ICCommonNavigationAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9841F61373BE801529E58C142076D72 /* ICPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10727EB14E4F7ECB310D2ED5033264E1 /* ICPageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C4DB372352329A5AF799F68FF9F5666;
+			remoteGlobalIDString = A8B65FF5ED3E249D97CB8579082AB6B4;
 			remoteInfo = ICPageManager;
 		};
 /* End PBXContainerItemProxy section */
@@ -46,62 +50,66 @@
 		046893C4DF90526C5BD6A90C8021A76E /* Pods-ICPageManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ICPageManager_Example-dummy.m"; sourceTree = "<group>"; };
 		06447604B358F3106DE62B0C426E1945 /* Pods_ICPageManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ICPageManager_Tests.framework; path = "Pods-ICPageManager_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACC295270EB8808F934ABA011E9EA37 /* Pods-ICPageManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ICPageManager_Tests.modulemap"; sourceTree = "<group>"; };
+		0EE238AC6411DDE792C12F3A4403F1D1 /* ICPageNaviAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICPageNaviAnimationController.m; sourceTree = "<group>"; };
+		10727EB14E4F7ECB310D2ED5033264E1 /* ICPageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICPageManager.m; sourceTree = "<group>"; };
 		122CD154A05CF47C8F335C68A233A9E6 /* ICPageManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ICPageManager-prefix.pch"; sourceTree = "<group>"; };
-		2450C1A755D6F10DB6B55E0B8A6E987B /* ICCommonPresentAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonPresentAnimatedTransitioning.h; sourceTree = "<group>"; };
+		22F6742FE92B3C5274CE9514F94A3B57 /* ICCommonPresentAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonPresentAnimatedTransitioning.h; sourceTree = "<group>"; };
 		24EF7E779E5D4DC9DB98C08627C064A9 /* Pods-ICPageManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ICPageManager_Tests-dummy.m"; sourceTree = "<group>"; };
-		32C4372F7F615A8A259CDF18C809F58F /* ICCommonNavigationAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonNavigationAnimationController.m; sourceTree = "<group>"; };
-		36623B051F1CE3547D63F2C97E4F05E6 /* ICCommonPresentAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonPresentAnimatedTransitioning.m; sourceTree = "<group>"; };
-		368D39C2B7894C3CA53AF2B8007C24DB /* ICCommonNavigationAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonNavigationAnimationController.h; sourceTree = "<group>"; };
+		2585CFAA1F81E87AE9B786982CF3837D /* ICCommonPresentAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonPresentAnimatedTransitioning.m; sourceTree = "<group>"; };
+		3883B0DBC2ECDF0CDA6A6C8DBDCA5A78 /* ICCommonAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonAnimationController.m; sourceTree = "<group>"; };
 		3A1F6848F6D81BCAF9DC25A5BB7B56C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1CAB758615BD1204487413F2953E17 /* ICPageManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ICPageManager.modulemap; sourceTree = "<group>"; };
+		42C15BD482376688CA47D57E4C8CBE37 /* ICCommonNavigationAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonNavigationAnimatedTransitioning.h; sourceTree = "<group>"; };
+		4E157E8C5C017082ACD874304E3C295C /* ICPageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICPageManager.h; sourceTree = "<group>"; };
+		545E1F916B4405449291183105324B85 /* ICPageNaviAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICPageNaviAnimationController.h; sourceTree = "<group>"; };
 		59113C104E6A3F6253CE224C3F386B8E /* Pods-ICPageManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICPageManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5F4BB685E283C9785A5AF3E0F5155759 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D3A3A94B21E8F259C306532CC6DE1D /* Pods-ICPageManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ICPageManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		659D5D3F7068196DEE3213FB6A114B9D /* Pods-ICPageManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICPageManager_Tests-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6DA83AA7E3A84486CDB8CA6C6D89CFB3 /* Pods-ICPageManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICPageManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6E301E14B904AD5903D3E1BB3FE9FEDE /* ICPagePresentAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICPagePresentAnimationController.m; sourceTree = "<group>"; };
 		6F38E0CE2AE940E227720480686FE6A7 /* Pods_ICPageManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ICPageManager_Example.framework; path = "Pods-ICPageManager_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		733938DED6695657BBAD440880934EF3 /* Pods-ICPageManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ICPageManager_Example.modulemap"; sourceTree = "<group>"; };
-		787C073A784018AA09DA3B451735EC6E /* ICCommonNavigationAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonNavigationAnimatedTransitioning.h; sourceTree = "<group>"; };
 		7D10AC3FAFC706EDA501C87090F5F6C6 /* Pods-ICPageManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ICPageManager_Example-umbrella.h"; sourceTree = "<group>"; };
+		7E7B046D49BE8C02E8BEA55975C457EE /* ICCommonAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonAnimationController.h; sourceTree = "<group>"; };
 		80B2B4DB41F19EF56456AE8B38BEB85E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84755D8E1D365A37793D7DFE11ACBDDF /* ICPageAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICPageAnimationController.m; sourceTree = "<group>"; };
 		8597F8B200A71CA46811D1C7ADC281D5 /* Pods-ICPageManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICPageManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94214E4841EE325881DBC21FBF0A8BD5 /* Pods-ICPageManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICPageManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		97DC6247CCB86B1570FD954F0DED4332 /* Pods-ICPageManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ICPageManager_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9AC45B4369F91B7692D48676FED6F6A5 /* Pods-ICPageManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICPageManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A7146F05D28B87AC90B82732BA5BFAC7 /* ICCommonPresentAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonPresentAnimationController.m; sourceTree = "<group>"; };
-		ABFC1D8915263EFCBF655E0596B8F7D7 /* ICAnimatedPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICAnimatedPage.h; sourceTree = "<group>"; };
 		AEA188971E8E8FC55D63CBCC9D45B581 /* Pods-ICPageManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICPageManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B0899FFA2B54954244B18F6508286876 /* Pods-ICPageManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ICPageManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B90D89BAD2877D123BF1AE5D8485C72C /* ICPageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICPageManager.h; sourceTree = "<group>"; };
+		B3AC1339E717E4A2202A8531F3AC810F /* ICAnimatedPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICAnimatedPage.h; sourceTree = "<group>"; };
+		B4A9D03368EA2BBEA736CF76724B9AD6 /* ICCommonNavigationAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonNavigationAnimatedTransitioning.m; sourceTree = "<group>"; };
+		B5BBE3D3DBF3604045BD9CC4AAA96583 /* ICCommonPresentAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonPresentAnimationController.h; sourceTree = "<group>"; };
 		B9695735BE16925C93DC6426ACE2747E /* ICPageManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ICPageManager.xcconfig; sourceTree = "<group>"; };
 		BBFD7499074787C8B080D417FB352F3C /* Pods-ICPageManager_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICPageManager_Example-resources.sh"; sourceTree = "<group>"; };
-		C44FAB0BCB1F636CFDB92E5A5991C95D /* ICPageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICPageManager.m; sourceTree = "<group>"; };
 		C73345713CF97D31558B9E8201A0B221 /* Pods-ICPageManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ICPageManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CD1C33477D27F28407D875D8F84F730B /* ICCommonNavigationAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonNavigationAnimatedTransitioning.m; sourceTree = "<group>"; };
-		DF30E0F8B3C7D9CE375CF6267D9227E9 /* ICPageAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICPageAnimationController.h; sourceTree = "<group>"; };
+		D8698A57F0A70873C83520F4239F8B7F /* ICPagePresentAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICPagePresentAnimationController.h; sourceTree = "<group>"; };
+		DA9820EB104D7970B6000DECEB0D5951 /* ICCommonNavigationAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonNavigationAnimationController.h; sourceTree = "<group>"; };
 		F45B4CA6A324D036030C4610EDAF4E97 /* ICPageManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ICPageManager-dummy.m"; sourceTree = "<group>"; };
+		F59389CA17A6D6410F65B58A1D8E7026 /* ICCommonNavigationAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonNavigationAnimationController.m; sourceTree = "<group>"; };
 		F6CE0B96796F8A28A0C7066905C36261 /* Pods-ICPageManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ICPageManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F8C9C58AF78BA2091E601DC721405609 /* ICCommonPresentAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICCommonPresentAnimationController.h; sourceTree = "<group>"; };
 		FC09D7D2391A06D254900C639E95173C /* ICPageManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ICPageManager.framework; path = ICPageManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB2D4DA3B1A930862B893390B6A677A /* ICCommonPresentAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICCommonPresentAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		38E1FD3250F2F52E4700E194425A2DC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D0E4BE5BB8A515F4D102445F5CE91C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F2B7F01714114E8017A0F23EC7A3DAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				53637AE46C1623BAA6E410A6A0DCFC7E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71EF33B665E764E7D589F401A8016E42 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5554B242C7C8CF62959C01183EF07069 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +124,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9EC71E604EE79EE59195393E57F157 /* AnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				545E1F916B4405449291183105324B85 /* ICPageNaviAnimationController.h */,
+				0EE238AC6411DDE792C12F3A4403F1D1 /* ICPageNaviAnimationController.m */,
+				D8698A57F0A70873C83520F4239F8B7F /* ICPagePresentAnimationController.h */,
+				6E301E14B904AD5903D3E1BB3FE9FEDE /* ICPagePresentAnimationController.m */,
+				0D1CDA39DE0FF57A6728E10564EEFC8B /* Basic */,
+			);
+			name = AnimationController;
+			path = AnimationController;
+			sourceTree = "<group>";
+		};
+		0D1CDA39DE0FF57A6728E10564EEFC8B /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				7E7B046D49BE8C02E8BEA55975C457EE /* ICCommonAnimationController.h */,
+				3883B0DBC2ECDF0CDA6A6C8DBDCA5A78 /* ICCommonAnimationController.m */,
+				DA9820EB104D7970B6000DECEB0D5951 /* ICCommonNavigationAnimationController.h */,
+				F59389CA17A6D6410F65B58A1D8E7026 /* ICCommonNavigationAnimationController.m */,
+				B5BBE3D3DBF3604045BD9CC4AAA96583 /* ICCommonPresentAnimationController.h */,
+				FDB2D4DA3B1A930862B893390B6A677A /* ICCommonPresentAnimationController.m */,
+			);
+			name = Basic;
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		30E76F57221AD133A9464EC3421E0324 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,30 +163,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/ICPageManager";
-			sourceTree = "<group>";
-		};
-		3BA50772C7549063C92187B26CBB03DA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				ABFC1D8915263EFCBF655E0596B8F7D7 /* ICAnimatedPage.h */,
-				DF30E0F8B3C7D9CE375CF6267D9227E9 /* ICPageAnimationController.h */,
-				84755D8E1D365A37793D7DFE11ACBDDF /* ICPageAnimationController.m */,
-				B90D89BAD2877D123BF1AE5D8485C72C /* ICPageManager.h */,
-				C44FAB0BCB1F636CFDB92E5A5991C95D /* ICPageManager.m */,
-				AAE4100D3B85AD0F4A66EA3D4AFA43E4 /* AnimationController */,
-				F24CE66D2BB82EA623D62DB37A442CE6 /* Animations */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		6C58F4E46F2D06F26F5276DCED68F927 /* ICPageManager */ = {
-			isa = PBXGroup;
-			children = (
-				3BA50772C7549063C92187B26CBB03DA /* Classes */,
-			);
-			name = ICPageManager;
-			path = ICPageManager;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -175,16 +186,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAE4100D3B85AD0F4A66EA3D4AFA43E4 /* AnimationController */ = {
+		8A2CF1A6ECDD7E0D8CC530949D72D700 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				368D39C2B7894C3CA53AF2B8007C24DB /* ICCommonNavigationAnimationController.h */,
-				32C4372F7F615A8A259CDF18C809F58F /* ICCommonNavigationAnimationController.m */,
-				F8C9C58AF78BA2091E601DC721405609 /* ICCommonPresentAnimationController.h */,
-				A7146F05D28B87AC90B82732BA5BFAC7 /* ICCommonPresentAnimationController.m */,
+				B3AC1339E717E4A2202A8531F3AC810F /* ICAnimatedPage.h */,
+				4E157E8C5C017082ACD874304E3C295C /* ICPageManager.h */,
+				10727EB14E4F7ECB310D2ED5033264E1 /* ICPageManager.m */,
+				0A9EC71E604EE79EE59195393E57F157 /* AnimationController */,
+				900DBF618A5E134416FC62FB5C4548E5 /* Animations */,
 			);
-			name = AnimationController;
-			path = AnimationController;
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		900DBF618A5E134416FC62FB5C4548E5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				42C15BD482376688CA47D57E4C8CBE37 /* ICCommonNavigationAnimatedTransitioning.h */,
+				B4A9D03368EA2BBEA736CF76724B9AD6 /* ICCommonNavigationAnimatedTransitioning.m */,
+				22F6742FE92B3C5274CE9514F94A3B57 /* ICCommonPresentAnimatedTransitioning.h */,
+				2585CFAA1F81E87AE9B786982CF3837D /* ICCommonPresentAnimatedTransitioning.m */,
+			);
+			name = Animations;
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		AB57B80ACFD50F1DBE726ED54A59FBC9 /* Pods-ICPageManager_Tests */ = {
@@ -242,7 +266,7 @@
 		C58BE43579B07AFA5D77CE25A31E0412 /* ICPageManager */ = {
 			isa = PBXGroup;
 			children = (
-				6C58F4E46F2D06F26F5276DCED68F927 /* ICPageManager */,
+				F764079568970AE41EA35D4134C1ABE7 /* ICPageManager */,
 				30E76F57221AD133A9464EC3421E0324 /* Support Files */,
 			);
 			name = ICPageManager;
@@ -266,36 +290,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F24CE66D2BB82EA623D62DB37A442CE6 /* Animations */ = {
+		F764079568970AE41EA35D4134C1ABE7 /* ICPageManager */ = {
 			isa = PBXGroup;
 			children = (
-				787C073A784018AA09DA3B451735EC6E /* ICCommonNavigationAnimatedTransitioning.h */,
-				CD1C33477D27F28407D875D8F84F730B /* ICCommonNavigationAnimatedTransitioning.m */,
-				2450C1A755D6F10DB6B55E0B8A6E987B /* ICCommonPresentAnimatedTransitioning.h */,
-				36623B051F1CE3547D63F2C97E4F05E6 /* ICCommonPresentAnimatedTransitioning.m */,
+				8A2CF1A6ECDD7E0D8CC530949D72D700 /* Classes */,
 			);
-			name = Animations;
-			path = Animations;
+			name = ICPageManager;
+			path = ICPageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		56BF4E64403D295FC0A720A5D88EDA73 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EBF2799AC2DD3ABAC0EEB8A9DF8A5AB /* ICAnimatedPage.h in Headers */,
-				405DEA8D995923875A24B33C1076A78A /* ICCommonNavigationAnimatedTransitioning.h in Headers */,
-				73D312ABAFA3988BC6BB48092517080E /* ICCommonNavigationAnimationController.h in Headers */,
-				89B51AF7853CD4A7030CE8B641F40A87 /* ICCommonPresentAnimatedTransitioning.h in Headers */,
-				BF3C7F61493DB15FF3675265EC47512A /* ICCommonPresentAnimationController.h in Headers */,
-				C780194354A6C14619669E9751BDBC71 /* ICPageAnimationController.h in Headers */,
-				AD62E15721CF834BE5A003930352EED5 /* ICPageManager-umbrella.h in Headers */,
-				45BC3E6A901B14D6F73AE5CDC7048005 /* ICPageManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		883E8117F435B9A4645D58CA4A428F29 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +315,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				086577B324F3C1F149CAD70AFEF0C881 /* Pods-ICPageManager_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE470FE032FBE6AE8CC961F2B6A99796 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783F61D6AA91C978616403FA31603758 /* ICAnimatedPage.h in Headers */,
+				B9851C8A0F3B846D097F82376E5B8488 /* ICCommonAnimationController.h in Headers */,
+				AAD39E93CAB18E3708497DB28017D2F3 /* ICCommonNavigationAnimatedTransitioning.h in Headers */,
+				ED08D8CBEADAEC92F93BD2A0E6CF252B /* ICCommonNavigationAnimationController.h in Headers */,
+				717E9CF62A9C73CF5D6164C1D9A7B187 /* ICCommonPresentAnimatedTransitioning.h in Headers */,
+				D9F2C5AAA753CE4144481111CCE7C30F /* ICCommonPresentAnimationController.h in Headers */,
+				0FB1C845397EE338B94280E98EE43365 /* ICPageManager-umbrella.h in Headers */,
+				480AD518C5066B8E02B89C980EB5F8A2 /* ICPageManager.h in Headers */,
+				01153D8BD7D12420B7B89002216387A8 /* ICPageNaviAnimationController.h in Headers */,
+				3106925358B18B9425291F0EE5B9694C /* ICPagePresentAnimationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,13 +373,13 @@
 			productReference = 6F38E0CE2AE940E227720480686FE6A7 /* Pods_ICPageManager_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8C4DB372352329A5AF799F68FF9F5666 /* ICPageManager */ = {
+		A8B65FF5ED3E249D97CB8579082AB6B4 /* ICPageManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66DC64BEB9EDDC80DBBE5E2B19201B6F /* Build configuration list for PBXNativeTarget "ICPageManager" */;
+			buildConfigurationList = 6C340924E87303C7EA5621754581E8C3 /* Build configuration list for PBXNativeTarget "ICPageManager" */;
 			buildPhases = (
-				9D35FB1C6E9792B65626BC0AF1E009DA /* Sources */,
-				71EF33B665E764E7D589F401A8016E42 /* Frameworks */,
-				56BF4E64403D295FC0A720A5D88EDA73 /* Headers */,
+				8BFD8ABC6F951B29663237038B361EAF /* Sources */,
+				38E1FD3250F2F52E4700E194425A2DC0 /* Frameworks */,
+				EE470FE032FBE6AE8CC961F2B6A99796 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -388,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C4DB372352329A5AF799F68FF9F5666 /* ICPageManager */,
+				A8B65FF5ED3E249D97CB8579082AB6B4 /* ICPageManager */,
 				897A1D6ED0D76F5301BBFBBE34AE09AE /* Pods-ICPageManager_Example */,
 				28777762BBFA33EDC895482718ECFFD0 /* Pods-ICPageManager_Tests */,
 			);
@@ -404,17 +427,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D35FB1C6E9792B65626BC0AF1E009DA /* Sources */ = {
+		8BFD8ABC6F951B29663237038B361EAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				393DA727D02D0E58D2F70B917ACA5797 /* ICCommonNavigationAnimatedTransitioning.m in Sources */,
-				48C62137FA13CE7586BF69170D401F55 /* ICCommonNavigationAnimationController.m in Sources */,
-				99A5D0BF550F1B8FBE8BBC23D66552EE /* ICCommonPresentAnimatedTransitioning.m in Sources */,
-				6D26FFCACE673587A64F7AAA70A74ADF /* ICCommonPresentAnimationController.m in Sources */,
-				EA61E4857CD358D75B81F581129C0BF4 /* ICPageAnimationController.m in Sources */,
-				2B38CFE2A67E5527D21CC4E3EC78812E /* ICPageManager-dummy.m in Sources */,
-				C50A147FAC8045531CAF3C0701EF5F5D /* ICPageManager.m in Sources */,
+				87C6FBD3915E727414EDC179592139BE /* ICCommonAnimationController.m in Sources */,
+				2A9A4558F2A17FFA1E04B7F64D9986F7 /* ICCommonNavigationAnimatedTransitioning.m in Sources */,
+				CFE53AF7D337885590B452E06A3229D9 /* ICCommonNavigationAnimationController.m in Sources */,
+				85D8D069B5F3A5B03C8A27EFF2C1CF99 /* ICCommonPresentAnimatedTransitioning.m in Sources */,
+				53A494CA02B0CBC9639CD79BF5B033EC /* ICCommonPresentAnimationController.m in Sources */,
+				216FF040ECB6A1B7F8ADCBE45FE8D26D /* ICPageManager-dummy.m in Sources */,
+				F9841F61373BE801529E58C142076D72 /* ICPageManager.m in Sources */,
+				60478DCC03EA9931E6FB8F7E65B99146 /* ICPageNaviAnimationController.m in Sources */,
+				E8C0E06DF1DCD158BB4BC6B9E0E7EB67 /* ICPagePresentAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,13 +457,13 @@
 		0A354DB7B8101B6398DF5FC89D774B93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ICPageManager;
-			target = 8C4DB372352329A5AF799F68FF9F5666 /* ICPageManager */;
+			target = A8B65FF5ED3E249D97CB8579082AB6B4 /* ICPageManager */;
 			targetProxy = 7A76772A12C9BDC36F7ABE446EE5D0BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0514F1E0D3BA6A268AC7A0DA6060D14B /* Release */ = {
+		0BA7F402538BDDB914C7A06C1E4DFFC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9695735BE16925C93DC6426ACE2747E /* ICPageManager.xcconfig */;
 			buildSettings = {
@@ -670,38 +695,6 @@
 			};
 			name = Debug;
 		};
-		DC85D7EA13DD90D8DD67B76C56944388 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9695735BE16925C93DC6426ACE2747E /* ICPageManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ICPageManager/ICPageManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ICPageManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ICPageManager/ICPageManager.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ICPageManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DCDEF011E9A62503D8EECAB910640010 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AC45B4369F91B7692D48676FED6F6A5 /* Pods-ICPageManager_Tests.debug.xcconfig */;
@@ -738,6 +731,38 @@
 			};
 			name = Debug;
 		};
+		DE42BFB0A0AAE99F7D979EE982B22268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9695735BE16925C93DC6426ACE2747E /* ICPageManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ICPageManager/ICPageManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ICPageManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ICPageManager/ICPageManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ICPageManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,11 +775,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66DC64BEB9EDDC80DBBE5E2B19201B6F /* Build configuration list for PBXNativeTarget "ICPageManager" */ = {
+		6C340924E87303C7EA5621754581E8C3 /* Build configuration list for PBXNativeTarget "ICPageManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC85D7EA13DD90D8DD67B76C56944388 /* Debug */,
-				0514F1E0D3BA6A268AC7A0DA6060D14B /* Release */,
+				DE42BFB0A0AAE99F7D979EE982B22268 /* Debug */,
+				0BA7F402538BDDB914C7A06C1E4DFFC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

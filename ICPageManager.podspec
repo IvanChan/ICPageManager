@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ICPageManager'
-  s.version          = '1.0.3'
+  s.version          = '1.1.0'
   s.summary          = 'A PageManager for you app'
 
 # This description is used to generate tags and improve search results.

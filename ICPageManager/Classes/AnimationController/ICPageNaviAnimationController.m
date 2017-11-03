@@ -1,35 +1,24 @@
 //
-//  ICPageAnimationController.m
+//  ICPageNaviAnimationController.m
 //  ICPageManager
 //
 //  Created by _ivanC on 1/20/16.
 //  Copyright © 2016 _ivanC. All rights reserved.
 //
 
-#import "ICPageAnimationController.h"
+#import "ICPageNaviAnimationController.h"
 #import "ICAnimatedPage.h"
 
 #import "ICCommonNavigationAnimatedTransitioning.h"
 
-@interface ICPageAnimationController ()
+@interface ICPageNaviAnimationController ()
 
 @property (nonatomic, strong) UIViewController<ICAnimatedPage> *mightBecomeActiveViewController;
 @property (nonatomic, strong) UIViewController *currentActiveViewController;
 
 @end
 
-@implementation ICPageAnimationController
-
-#pragma mark - Lifecycle
-- (instancetype)initWithNavigationController:(UINavigationController *)navigationController
-{
-    if (self = [super initWithNavigationController:navigationController])
-    {
-        self.enabledVerticalMove = YES;
-        self.borderTriggerWidthVertical = 0;
-    }
-    return self;
-}
+@implementation ICPageNaviAnimationController
 
 #pragma mark - Public
 - (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -119,7 +108,7 @@
         }
         else
         {
-            self.borderTriggerWidthHorizontal = ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH;
+            self.borderTriggerWidthHorizontal = IC_PAGEMANAGER_DEFAULT_BORDER_TRIGGER_WIDTH;
         }
         
         if ([animatedPageAnimationController respondsToSelector:@selector(borderTriggerWidthVertical)])
@@ -128,7 +117,7 @@
         }
         else
         {
-            self.borderTriggerWidthVertical = ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH;
+            self.borderTriggerWidthVertical = IC_PAGEMANAGER_DEFAULT_BORDER_TRIGGER_WIDTH;
         }
     }
 }
@@ -167,9 +156,9 @@
     {
         handled = [animatedPageAnimationController handleTransitionGesture:recognizer
                                                                 completion:^(BOOL isCanceled){
-                                                                    if ([self.delegate respondsToSelector:@selector(commonNavigationAnimationControllerDidFinishInteractiveTransition:isCanceled:)])
+                                                                    if ([self.delegate respondsToSelector:@selector(commonAnimationControllerDidFinishInteractiveTransition:isCanceled:)])
                                                                     {
-                                                                        [self.delegate commonNavigationAnimationControllerDidFinishInteractiveTransition:self
+                                                                        [self.delegate commonAnimationControllerDidFinishInteractiveTransition:self
                                                                                                                                               isCanceled:isCanceled];
                                                                     }
                                                                 }];
