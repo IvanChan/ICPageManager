@@ -119,7 +119,7 @@
         }
         else
         {
-            self.borderTriggerWidthHorizontal = 30;
+            self.borderTriggerWidthHorizontal = ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH;
         }
         
         if ([animatedPageAnimationController respondsToSelector:@selector(borderTriggerWidthVertical)])
@@ -128,7 +128,7 @@
         }
         else
         {
-            self.borderTriggerWidthVertical = 30;
+            self.borderTriggerWidthVertical = ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH;
         }
     }
 }

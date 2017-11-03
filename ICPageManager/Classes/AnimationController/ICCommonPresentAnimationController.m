@@ -9,7 +9,6 @@
 #import "ICCommonPresentAnimationController.h"
 #import "ICCommonNavigationAnimatedTransitioning.h"
 
-#define BORDER_TRIGGER_WIDTH	30	 ///< 边界的热区大小
 #define VELOCITY_TRIGGER_VALUE  600
 
 @interface ICCommonPresentAnimationController ()
@@ -39,8 +38,8 @@
         self.enabledHorizontalMove = YES;
         
         self.finishThreshold = 0.3;
-        self.borderTriggerWidthHorizontal = BORDER_TRIGGER_WIDTH;
-        self.borderTriggerWidthVertical = BORDER_TRIGGER_WIDTH;
+        self.borderTriggerWidthHorizontal = ICPAGEMANAGER_PRESENT_DEFAULT_BORDER_TRIGGER_WIDTH;
+        self.borderTriggerWidthVertical = ICPAGEMANAGER_PRESENT_DEFAULT_BORDER_TRIGGER_WIDTH;
     }
     return self;
 }

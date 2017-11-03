@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define ICPAGEMANAGER_PRESENT_DEFAULT_BORDER_TRIGGER_WIDTH    60     ///< Default border trigger width
+
 @protocol ICCommonPresentAnimationControllerDelegate;
 
 @interface ICCommonPresentAnimationController : NSObject <UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate>

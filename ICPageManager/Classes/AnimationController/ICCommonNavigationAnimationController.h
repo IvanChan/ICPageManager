@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH    60     ///< Default border trigger width
+
 @protocol ICCommonNavigationAnimationControllerDelegate;
 @interface ICCommonNavigationAnimationController : NSObject <UIGestureRecognizerDelegate>
 {
@@ -24,8 +26,8 @@
 @property (nonatomic, assign) BOOL enabledVerticalMove;      // Default is NO
 @property (nonatomic, assign) CGFloat finishThreshold;      // [0, 1], Default is 0.3
 
-@property (nonatomic, assign) CGFloat borderTriggerWidthHorizontal;     // Default is 30
-@property (nonatomic, assign) CGFloat borderTriggerWidthVertical;       // Default is 30
+@property (nonatomic, assign) CGFloat borderTriggerWidthHorizontal;     // Default is ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH
+@property (nonatomic, assign) CGFloat borderTriggerWidthVertical;       // Default is ICPAGEMANAGER_NAVI_DEFAULT_BORDER_TRIGGER_WIDTH
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
 
