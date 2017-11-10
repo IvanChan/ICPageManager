@@ -161,7 +161,8 @@
 
 - (BOOL)gestureRecognizer:(UIPanGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    if (gestureRecognizer != self.interactiveGestureRecognizer)
+    if (gestureRecognizer != self.interactiveGestureRecognizer
+        || ![self gestureRecognizerShouldBegin:gestureRecognizer] )
     {
         return NO;
     }
