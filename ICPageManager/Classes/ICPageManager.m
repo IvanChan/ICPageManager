@@ -101,6 +101,12 @@
     return self.mainNavigationController.view;
 }
 
+- (nonnull UIViewController *)pageWindowController
+{
+    return self.mainNavigationController;
+}
+
+
 - (nonnull UIViewController *)topViewController
 {
     return [self.mainNavigationController topViewController];

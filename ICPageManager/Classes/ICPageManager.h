@@ -17,6 +17,8 @@ typedef void(^ICPageManagerCompletionBlock)(UINavigationController *navigationCo
 - (void)setupWithRootViewController:(UIViewController *)rootViewController;
 
 - (UIView *)pageWindow;
+- (UIViewController *)pageWindowController;
+
 - (UIViewController *)topViewController;
 - (NSArray<__kindof UIViewController *> *)viewControllers;
 
