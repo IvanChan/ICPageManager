@@ -114,15 +114,17 @@
                          self.backgroundMaskView = nil;
                          
                          BOOL isCanceled = [transitionContext transitionWasCancelled];
-                         if (isCanceled)
-                         {
-                             [toViewController.view removeFromSuperview];
+                         if ([[[UIDevice currentDevice] systemVersion] floatValue] < 13) {
+
+                            if (isCanceled)
+                            {
+                                [toViewController.view removeFromSuperview];
+                            }
+                            else
+                            {
+                                [fromViewController.view removeFromSuperview];
+                            }
                          }
-                         else
-                         {
-                             [fromViewController.view removeFromSuperview];
-                         }
-                         
                          [transitionContext completeTransition:!isCanceled];
                      }];
     
