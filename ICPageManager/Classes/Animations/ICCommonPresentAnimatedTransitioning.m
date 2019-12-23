@@ -72,10 +72,14 @@
         
         toViewController.view.transform = CGAffineTransformIdentity;
         toViewController.view.frame = containerView.bounds;
-        [containerView addSubview:toViewController.view];
         
-        [containerView bringSubviewToFront:self.backgroundMaskView];
-        [containerView bringSubviewToFront:fromViewController.view];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 13) {
+
+            [containerView addSubview:toViewController.view];
+        
+            [containerView bringSubviewToFront:self.backgroundMaskView];
+            [containerView bringSubviewToFront:fromViewController.view];
+        }
 
     }
     self.backgroundMaskView.alpha = maskFromAlpha;
